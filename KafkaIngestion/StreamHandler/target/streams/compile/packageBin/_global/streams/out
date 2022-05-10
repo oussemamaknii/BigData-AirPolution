@@ -1,1 +1,23 @@
-[0m[[0m[0mdebug[0m] [0m[0mJar uptodate: /home/elbeuf/BigData-AirPolution/KafkaIngestion/StreamHandler/target/scala-2.12/stream-handler_2.12-1.0.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/elbeuf/BigData-AirPolution/KafkaIngestion/StreamHandler/target/scala-2.11/stream-handler_2.11-1.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StreamHandler$$typecreator11$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/elbeuf/BigData-AirPolution/KafkaIngestion/StreamHandler/target/scala-2.11/classes/StreamHandler$$typecreator11$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StreamHandler$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/elbeuf/BigData-AirPolution/KafkaIngestion/StreamHandler/target/scala-2.11/classes/StreamHandler$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Air.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/elbeuf/BigData-AirPolution/KafkaIngestion/StreamHandler/target/scala-2.11/classes/Air.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StreamHandler$$anonfun$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/elbeuf/BigData-AirPolution/KafkaIngestion/StreamHandler/target/scala-2.11/classes/StreamHandler$$anonfun$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StreamHandler.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/elbeuf/BigData-AirPolution/KafkaIngestion/StreamHandler/target/scala-2.11/classes/StreamHandler.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StreamHandler$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/elbeuf/BigData-AirPolution/KafkaIngestion/StreamHandler/target/scala-2.11/classes/StreamHandler$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StreamHandler$$typecreator12$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/elbeuf/BigData-AirPolution/KafkaIngestion/StreamHandler/target/scala-2.11/classes/StreamHandler$$typecreator12$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Air$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/elbeuf/BigData-AirPolution/KafkaIngestion/StreamHandler/target/scala-2.11/classes/Air$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StreamHandler$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/elbeuf/BigData-AirPolution/KafkaIngestion/StreamHandler/target/scala-2.11/classes/StreamHandler$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StreamHandler$$anonfun$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/elbeuf/BigData-AirPolution/KafkaIngestion/StreamHandler/target/scala-2.11/classes/StreamHandler$$anonfun$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

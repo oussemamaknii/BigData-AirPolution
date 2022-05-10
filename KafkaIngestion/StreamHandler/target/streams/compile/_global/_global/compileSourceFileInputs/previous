@@ -1,0 +1,1 @@
+["sbt.Task[scala.collection.immutable.Map[java.lang.String, scala.collection.Seq[scala.Tuple2[java.nio.file.Path, sbt.nio.FileStamp]]]]",{"2.11.12":{"hashes":[["/home/elbeuf/BigData-AirPolution/KafkaIngestion/StreamHandler/src/main/scala/StreamHandler.scala","c269bf10f0d3c376cff9d2a340efd498da209b42"]],"lastModifiedTimes":[]}}]
