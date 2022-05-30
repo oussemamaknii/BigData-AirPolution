@@ -4,6 +4,9 @@ import org.apache.spark.sql.streaming._
 import org.apache.spark.sql.types._
 import org.apache.spark.sql.cassandra._
 import org.apache.spark.sql.functions.col
+import java.text._
+import java.util._
+
 
 import com.datastax.oss.driver.api.core.uuid.Uuids // com.datastax.cassandra:cassandra-driver-core:4.0.0
 import com.datastax.spark.connector._              // com.datastax.spark:spark-cassandra-connector_2.11:2.4.3
@@ -40,6 +43,11 @@ object StreamHandler {
 
 		import spark.implicits._
 
+		spark.sparkContext.hadoopConfiguration.set("fs.s3a.access.key", "AKIA5ISK54AT7URSUZVU")
+		spark.sparkContext.hadoopConfiguration.set("fs.s3a.secret.key", "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")
+		spark.sparkContext.hadoopConfiguration.set("fs.s3a.endpoint", "s3.amazonaws.com")
+
+
 		// read from Kafka
 		val inputDF = spark
 			.readStream
@@ -67,10 +75,12 @@ object StreamHandler {
 		// table schema in cassandra
 		val summaryWithIDs = expandedDF
 			.withColumn("uuid", makeUUID())
-			.withColumn("date_debut",to_timestamp(col("date_debut_string")))
-			.withColumn("date_fin",to_timestamp(col("date_fin_string")))
+			.withColumn("data_date",unix_timestamp(to_timestamp(col("date_debut_string"),"yyyy-mm-dd")))
 			.drop(col("date_debut_string"))
 			.drop(col("date_fin_string"))
+		
+		val format = new SimpleDateFormat("yyyMMdd")
+		val a = format.format(Calendar.getInstance().getTime())
 
 		// write dataframe to Cassandra
 		val query = summaryWithIDs
@@ -83,6 +93,7 @@ object StreamHandler {
 					.cassandraFormat("weather", "bigd") // table, keyspace
 					.mode("append")
 					.save()
+				batchDF.write.mode("append").parquet("s3a://oussemadatalake/usage/analytics/"+a+"/")
 			}
 			.outputMode("update")
 			.start()

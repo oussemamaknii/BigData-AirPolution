@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/home/elbeuf/BigData-AirPolution/KafkaIngestion/StreamHandler/src/main/scala/StreamHandler.scala:96:26: too many arguments for method parquet: (path: String)Unit[0m
+[0m[[0m[31merror[0m] [0m[0m				batchDF.write.parquet("s3a://oussemadatalake/usage/analytics/"+a+"/",mode="append")[0m
+[0m[[0m[31merror[0m] [0m[0m				                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

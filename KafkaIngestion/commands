@@ -3,7 +3,10 @@ sudo /home/elbeuf/kafka/bin/zookeeper-server-start.sh /home/elbeuf/kafka/config/
 sudo /home/elbeuf/kafka/bin/kafka-server-start.sh /home/elbeuf/kafka/config/server.properties
 sudo /home/elbeuf/kafka/bin/kafka-topics.sh --create --topic weather --bootstrap-server localhost:9092
 sudo /home/elbeuf/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic weather --from-beginning
-
+cd ~/BigData-AirPolution/KafkaIngestion/StreamHandler && ~/spark/bin/spark-submit --class StreamHandler --master local[*] --packages "org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5,com.datastax.cassandra:cassandra-driver-core:4.0.0,com.datastax.spark:spark-cassandra-connector_2.11:2.4.3" target/scala-2.11/stream-handler_2.11-1.0.jar
 ./yarn-daemon.sh start nodemanager
 ./hadoop-daemon.sh start datanode
 ./hadoop-daemon.sh start namenode
+
+source bin/activate
+airflow standalone
